@@ -3,7 +3,7 @@ Import all the tsv wikimedia history dump to mongodb
 
 ## Repository purpose
 
-The purpose of this repo is to import all the italian **tsv wikimedia history dump** in a **mongodb database**. The reference to the dump is [here](https://dumps.wikimedia.org/other/mediawiki_history/readme.html).https://dumps.wikimedia.org/other/mediawiki_history/readme.html
+The purpose of this repo is to import all the italian **tsv wikimedia history dump** in a **mongodb database**. The reference to the dump is [here](https://dumps.wikimedia.org/other/mediawiki_history/readme.html).
 
 All the data in the tsv is preserved, but separated in **three collections** in base of the event_type: revisions, pages and users.
 
