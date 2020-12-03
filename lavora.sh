@@ -15,21 +15,12 @@ function lavora {
     bzip2 -d ${YEAR}.tsv.bz2
     echo -e "Extracted $YEAR\n"
 
-    echo "Jsonizing..."
-    python main.py ${YEAR}
-    echo -e "Jsonized $YEAR\n"
-
     echo "Importing..."
-    mongoimport --db=wikimedia_history --collection=revisions --file=revisions.json
-    mongoimport --db=wikimedia_history --collection=users --file=users.json
-    mongoimport --db=wikimedia_history --collection=pages --file=pages.json
-    echo "Imported $YEAR\n"
+    python main.py ${YEAR}
+    echo -e "Imported $YEAR\n"
 
     echo "Removing..."
     rm ${YEAR}.tsv
-    rm pages.json
-    rm revisions.json
-    rm users.json
     echo -e "Removed $YEAR\n"
 }
 
