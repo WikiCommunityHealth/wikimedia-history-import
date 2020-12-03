@@ -16,7 +16,7 @@ function lavora {
     echo -e "Extracted $YEAR\n"
 
     echo "Importing..."
-    python main.py ${YEAR}
+    python3 main.py ${YEAR}
     echo -e "Imported $YEAR\n"
 
     echo "Removing..."
