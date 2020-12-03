@@ -21,11 +21,12 @@ function lavora {
 
     echo "Removing..."
     rm ${YEAR}.tsv
+    rm ${YEAR}.tsv.bz2
     echo -e "Removed $YEAR\n"
 }
 
 for YEAR in `seq $FROM $TO`;
-do
+do  
     lavora $YEAR
     echo -e "\n\n\n"
 done
