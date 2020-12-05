@@ -5,7 +5,7 @@ Import all the tsv wikimedia history dump to mongodb
 
 The purpose of this repo is to import all the italian **tsv wikimedia history dump** in a **mongodb database**. The reference to the dump is [here](https://dumps.wikimedia.org/other/mediawiki_history/readme.html).
 
-All the data in the tsv is preserved, but separated in **three collections** in base of the event_type: revisions, pages and users.
+All the data in the tsv is preserved, but separated in **three collections** in base of the event_type: revisions, pages and users. The types are correctly parsed before inserting to mongodb, so the timestamps become dates, the comma-separated lists become arrays of strings, ecc. ecc.
 
 ## How was it made
 
